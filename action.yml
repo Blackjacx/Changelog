@@ -1,0 +1,10 @@
+name: 'Changelog'
+description: 'This action creates a changelog entry in a file named using the PR number each time a PR is created.'
+inputs:
+  changelog-folder-path:
+    description: 'The folder, relative top the project path, where the changelog files are stored.'
+    required: true
+    default: 'changelog'
+runs:
+  using: 'node12'
+  main: 'index.js'

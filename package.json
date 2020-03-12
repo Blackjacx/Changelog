@@ -1,0 +1,26 @@
+{
+  "name": "changelog",
+  "version": "1.0.0",
+  "description": "In our project we maintained a CHANGELOG.md file since the beginning. Now as we get more and more developers and have multiple pull requests the changelog entries produce merge conflicts for almost each PR and this multiple times. This means we hav to rebase a lot which is annoying. This GitHub action to the rescue. It writes the changelog entry in the format `* [#2070](https://github.com/<owner>/<repo>/pull/2070): My awesome feature - [@PRAuthor](https://github.com/PRAuthor).` into the text file `<project_root>/changelogs/<pr_number>.txt` on the PR branch and commits this change using a proper commit message. The file is named using the PR number. Due to the uniqueness of PR numbers, merge conflicts cannot happen anymore.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blackjacx/Changelog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Blackjacx/Changelog/issues"
+  },
+  "homepage": "https://github.com/Blackjacx/Changelog#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/exec": "^1.0.3",
+    "@actions/github": "^2.1.1",
+    "@actions/io": "^1.0.2"
+  }
+}
